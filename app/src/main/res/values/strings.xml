@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">Gli TMDB</string>
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="discover_movie">Discover Movie</string>
+  <string name="retry">Retry</string>
+  <string name="empty_discover_movie">There is no movie to discover!</string>
+  <string name="no_internet">No Internet, Please check your connection!</string>
+  <string name="cant_get_discover_movie">Can\'t get Discover Movie data right now. Please try again later.</string>
+</resources>
