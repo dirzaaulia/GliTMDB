@@ -7,4 +7,11 @@
   <string name="empty_discover_movie">There is no movie to discover!</string>
   <string name="no_internet">No Internet, Please check your connection!</string>
   <string name="cant_get_discover_movie">Can\'t get Discover Movie data right now. Please try again later.</string>
+  <string name="budget">Budget</string>
+  <string name="genre">Genre</string>
+  <string name="production_companies">Production Companies</string>
+  <string name="release_date">Release Date</string>
+  <string name="status">Status</string>
+  <string name="vote_average">Vote Average</string>
+  <string name="full_review"><![CDATA[Full Review >]]></string>
 </resources>

@@ -1,9 +1,17 @@
 package com.dirzaaulia.glitmdb.util
 
+import android.content.ActivityNotFoundException
 import android.content.Context
+import android.content.Intent
+import android.icu.text.SimpleDateFormat
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.net.Uri
+import android.os.Build
 import timber.log.Timber
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 fun isOnline(context: Context): Boolean {
     val connectivityManager =
@@ -27,4 +35,31 @@ fun isOnline(context: Context): Boolean {
         }
     }
     return false
+}
+
+fun dateFormatter(value: String, fromFormat: String, toFormat: String): String {
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        val inputFormat: DateTimeFormatter = DateTimeFormatter.ofPattern(fromFormat)
+        val date: LocalDate = LocalDate.parse(value, inputFormat)
+        val outputFormat: DateTimeFormatter = DateTimeFormatter.ofPattern(toFormat)
+
+        date.format(outputFormat)
+    } else {
+        val dateParser = SimpleDateFormat(fromFormat, Locale.getDefault())
+        val date: Date = dateParser.parse(value)
+        val dateFormatter = SimpleDateFormat(toFormat, Locale.getDefault())
+
+        dateFormatter.format(date)
+    }
+}
+
+fun openYoutube(context: Context, videoId: String) {
+    val intentApp = Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:$videoId"))
+    val intentBrowser =
+        Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=$videoId"))
+    try {
+        context.startActivity(intentApp)
+    } catch (ex: ActivityNotFoundException) {
+        context.startActivity(intentBrowser)
+    }
 }

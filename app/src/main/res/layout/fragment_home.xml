@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,7 +13,7 @@
       android:layout_marginStart="12dp"
       app:title="@string/app_name"
       app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-      app:layout_constraintTop_toTopOf="parent"/>
+      app:layout_constraintTop_toTopOf="parent" />
 
   <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
@@ -30,7 +29,7 @@
         android:layout_height="wrap_content"
         android:text="@string/discover_movie"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -43,7 +42,7 @@
         app:spanCount="2"
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/item_home"/>
+        tools:listitem="@layout/item_home" />
 
     <ProgressBar
         android:id="@+id/progress_bar"
@@ -53,20 +52,19 @@
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/status"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-        android:visibility="visible"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:text="No Internet, Please check your connection!"/>
+        app:layout_constraintBottom_toBottomOf="parent">
+
+      <include
+          android:id="@+id/view_status"
+          layout="@layout/view_status" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -5,9 +5,16 @@
       <map>
         <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/drawable/ic_baseline_broken_image_24.xml" value="0.21481481481481482" />
         <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/layout/activity_main.xml" value="0.22395833333333334" />
+        <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/layout/fragment_description.xml" value="0.23802083333333332" />
+        <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/layout/fragment_details.xml" value="0.264" />
         <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/layout/fragment_reviews.xml" value="0.23802083333333332" />
+        <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/layout/fragment_video.xml" value="0.23802083333333332" />
         <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/layout/item_home.xml" value="0.11979166666666667" />
+        <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/layout/item_review.xml" value="0.23802083333333332" />
+        <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/layout/item_video.xml" value="0.23802083333333332" />
         <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/layout/view_grid_load_state.xml" value="0.144" />
+        <entry key="..\:/Android Studio/Projects/GliTMDB/app/src/main/res/layout/view_status.xml" value="0.23802083333333332" />
       </map>
     </option>
   </component>

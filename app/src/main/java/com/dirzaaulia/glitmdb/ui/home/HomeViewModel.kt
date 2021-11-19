@@ -13,7 +13,7 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val repository: Repository
-): ViewModel() {
+) : ViewModel() {
 
     private var currentDiscoverMovie: Flow<PagingData<Movie>>? = null
 
@@ -22,5 +22,4 @@ class HomeViewModel @Inject constructor(
         currentDiscoverMovie = newResult
         return newResult
     }
-
 }

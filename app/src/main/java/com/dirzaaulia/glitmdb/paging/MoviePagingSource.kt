@@ -6,9 +6,9 @@ import com.dirzaaulia.glitmdb.data.model.Movie
 import com.dirzaaulia.glitmdb.network.Service
 import com.dirzaaulia.glitmdb.util.TMDB_STARTING_PAGE_INDEX
 
-class PagingSource(
+class MoviePagingSource(
     private val service: Service
-): PagingSource<Int, Movie>() {
+) : PagingSource<Int, Movie>() {
 
     override fun getRefreshKey(state: PagingState<Int, Movie>): Int? {
         return state.anchorPosition?.let { anchorPosition ->

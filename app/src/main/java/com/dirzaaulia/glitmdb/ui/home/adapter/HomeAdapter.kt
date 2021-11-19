@@ -1,7 +1,6 @@
 package com.dirzaaulia.glitmdb.ui.home.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.paging.PagingDataAdapter
@@ -16,7 +15,7 @@ import com.dirzaaulia.glitmdb.util.TMDB_POSTER_URL
 
 class HomeAdapter(
     private val listener: HomeAdapterListener
-): PagingDataAdapter<Movie, HomeAdapter.ViewHolder>(HomeDiffCallback()) {
+) : PagingDataAdapter<Movie, HomeAdapter.ViewHolder>(HomeDiffCallback()) {
 
     interface HomeAdapterListener {
         fun onItemClicked(item: Movie)
@@ -40,7 +39,7 @@ class HomeAdapter(
     class ViewHolder(
         private val binding: ItemHomeBinding,
         private val listener: HomeAdapterListener
-    ): RecyclerView.ViewHolder(binding.root) {
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Movie) {
             binding.apply {
@@ -66,7 +65,7 @@ class HomeAdapter(
     }
 }
 
-private class HomeDiffCallback: DiffUtil.ItemCallback<Movie>() {
+private class HomeDiffCallback : DiffUtil.ItemCallback<Movie>() {
     override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
         return oldItem.id == newItem.id
     }

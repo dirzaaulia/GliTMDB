@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dirzaaulia.glitmdb.R
 import com.dirzaaulia.glitmdb.databinding.ViewGridLoadStateBinding
 
-class CommonGridLoadStateAdapter(
+class CommonLoadStateAdapter(
     private val retry: () -> Unit
-): LoadStateAdapter<CommonGridLoadStateAdapter.ViewHolder>() {
+) : LoadStateAdapter<CommonLoadStateAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, loadState: LoadState): ViewHolder {
         return ViewHolder.create(parent, retry)
@@ -25,7 +25,7 @@ class CommonGridLoadStateAdapter(
     class ViewHolder(
         private val binding: ViewGridLoadStateBinding,
         retry: () -> Unit
-    ): RecyclerView.ViewHolder(binding.root) {
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         init {
             binding.apply {

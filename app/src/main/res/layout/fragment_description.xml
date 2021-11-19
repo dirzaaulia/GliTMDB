@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.tab.DescriptionFragment">
+
+  <TextView
+      android:id="@+id/title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Venom: Let There Be Carnage" />
+
+  <TextView
+      android:id="@+id/tagline"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+      app:layout_constraintTop_toBottomOf="@id/title"
+      tools:text="Venom: Let There Be Carnage" />
+
+  <TextView
+      android:id="@+id/overview"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+      app:layout_constraintTop_toBottomOf="@id/tagline"
+      tools:text="Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
