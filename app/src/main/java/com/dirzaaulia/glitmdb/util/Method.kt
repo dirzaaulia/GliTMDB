@@ -8,6 +8,7 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.Uri
 import android.os.Build
+import androidx.core.content.ContextCompat
 import timber.log.Timber
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -62,4 +63,10 @@ fun openYoutube(context: Context, videoId: String) {
     } catch (ex: ActivityNotFoundException) {
         context.startActivity(intentBrowser)
     }
+}
+
+fun openUrl(context: Context, url: String) {
+    val intent = Intent(Intent.ACTION_VIEW)
+    intent.data = Uri.parse(url)
+    ContextCompat.startActivity(context, intent, null)
 }

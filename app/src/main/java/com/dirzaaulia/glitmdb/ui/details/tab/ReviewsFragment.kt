@@ -18,6 +18,7 @@ import com.dirzaaulia.glitmdb.ui.common.adapter.CommonLoadStateAdapter
 import com.dirzaaulia.glitmdb.ui.details.DetailsViewModel
 import com.dirzaaulia.glitmdb.ui.details.adapter.ReviewAdapter
 import com.dirzaaulia.glitmdb.util.isOnline
+import com.dirzaaulia.glitmdb.util.openUrl
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -57,7 +58,7 @@ class ReviewsFragment :
     }
 
     override fun onItemClicked(item: Review) {
-
+        item.url?.let { openUrl(requireContext(), it) }
     }
 
     private fun subscribeMovieReview() {
